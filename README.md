@@ -75,3 +75,40 @@ Or retrieve raw HTML via curl:
 ```bash
 curl -s "http://localhost:8080/tenders/$TENDER_ID/report"
 ```
+
+---
+
+## Preflight Verification
+
+Verify verdict stability across multiple runs:
+
+```bash
+# Generate synthetic bidder fixture PDFs (if not already present)
+.venv/bin/python scripts/make_fixtures.py
+
+# Run preflight against local server or deployed URL
+.venv/bin/python scripts/preflight.py --base-url http://localhost:8080 --runs 10
+```
+
+---
+
+## Cloud Run Deployment
+
+Deploy to Google Cloud Run (region `asia-south1`):
+
+```bash
+gcloud run deploy gem-bid-evaluator \
+  --source . \
+  --region asia-south1 \
+  --allow-unauthenticated \
+  --min-instances 1 \
+  --max-instances 3 \
+  --memory 1Gi \
+  --timeout 300 \
+  --set-env-vars GEMINI_MODEL=gemini-3.8-flash,GEMINI_FALLBACK_MODEL=gemini-3.5-flash-lite,GEMINI_API_KEY=<paste key at deploy time, never commit it>
+```
+
+> **Deployment Notes:**
+> - The `gemini_api_key.txt` file is for local development only. On Cloud Run the key is supplied via the `GEMINI_API_KEY` environment variable. The file is excluded by `.dockerignore` so it is never baked into the container image.
+> - Keep `--min-instances 1` during live judging to eliminate cold starts. After judging, redeploy with `--min-instances 0` to stop idle billing.
+
