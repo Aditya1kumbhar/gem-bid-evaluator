@@ -1,0 +1,39 @@
+{
+  "bidder_name": "ReviewBidder Pvt Ltd",
+  "documents_present": [
+    {
+      "doc_type": "contract copy",
+      "page": 1,
+      "quote": "Contract copy"
+    }
+  ],
+  "fields": [
+    {
+      "criterion_id": "exp_orders",
+      "disputed": false,
+      "guard_passed": false,
+      "page": 1,
+      "quote": "Successfully completed 2 orders in IT",
+      "raw_text": "2 orders",
+      "value": 2
+    },
+    {
+      "criterion_id": "turnover",
+      "disputed": false,
+      "guard_passed": true,
+      "page": 2,
+      "quote": "Annual Turnover FY 2023-24: Rs 60,00,000",
+      "raw_text": "Rs 60,00,000",
+      "value": 6000000.0
+    },
+    {
+      "criterion_id": "turnover",
+      "disputed": false,
+      "guard_passed": true,
+      "page": 2,
+      "quote": "Annual Turnover FY 2022-23: Rs 55,00,000",
+      "raw_text": "Rs 55,00,000",
+      "value": 5500000.0
+    }
+  ]
+}

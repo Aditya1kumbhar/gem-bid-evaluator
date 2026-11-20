@@ -1,0 +1,31 @@
+{
+  "bidder_name": "PassBidder Pvt Ltd",
+  "documents_present": [
+    {
+      "doc_type": "contract copy",
+      "page": 1,
+      "quote": "Contract copy with invoices self-certified by bidder"
+    },
+    {
+      "doc_type": "OEM authorisation",
+      "page": 2,
+      "quote": "Authorisation Form / Certificate with OEM details"
+    },
+    {
+      "doc_type": "undertaking",
+      "page": 3,
+      "quote": "Undertaking to the effect of financial standing and no liquidation"
+    }
+  ],
+  "fields": [
+    {
+      "criterion_id": "exp_orders",
+      "disputed": false,
+      "guard_passed": true,
+      "page": 1,
+      "quote": "Successfully completed 2 government orders for IT equipment",
+      "raw_text": "2 orders",
+      "value": 2
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "bidder_name": "FailBidder Pvt Ltd",
+  "documents_present": [
+    {
+      "doc_type": "contract copy",
+      "page": 1,
+      "quote": "Contract copy with single invoice"
+    },
+    {
+      "doc_type": "undertaking",
+      "page": 2,
+      "quote": "Undertaking to the effect of financial standing and no liquidation"
+    }
+  ],
+  "fields": [
+    {
+      "criterion_id": "exp_orders",
+      "disputed": false,
+      "guard_passed": true,
+      "page": 1,
+      "quote": "Successfully completed 1 order only for IT equipment",
+      "raw_text": "1 order",
+      "value": 1
+    }
+  ]
+}
